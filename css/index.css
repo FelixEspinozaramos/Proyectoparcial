@@ -1,0 +1,432 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+}
+
+header {
+    display: flex;
+    min-height: 75px;
+    background-color: black;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.texto p {
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+
+.logo img {
+    height: 60px;
+    margin-right: 1px;
+}
+
+header nav a {
+    font-weight: 600;
+    justify-content: center;
+    border-bottom: 11px;
+    margin: 4px 1px;
+}
+
+nav a:hover {
+    color: goldenrod;
+    background-color: black;
+}
+
+.header-nav__menu-link {
+    position: relative;
+    color: #aaaaaa;
+    text-decoration: none;
+    transition: 0.25s;
+    /* height: 3rem; */
+
+}
+
+.header-nav__menu-link:hover {
+    color: white;
+}
+
+.header-nav__menu-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -0.25rem;
+    width: 0;
+    height: 0.1rem;
+    background-color: #a88a61;
+    transition: 0.25s;
+}
+
+.header-nav__menu-link:hover:before {
+    width: 100%;
+}
+
+/*boton hamburguesa*/
+.checkbtn {
+    font-size: 40px;
+    color: #fff;
+    margin-right: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+@media (max-width:858px) {
+    .checkbtn {
+        display: block;
+    }
+
+    .Header_lista {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: black;
+        left: -120%;
+        text-align: center;
+        transition: all .5s;
+        top: 75px;
+        
+    }
+
+    .header-nav__menu-link {
+        display: block;
+        line-height: 20px;
+        margin: 50px 0;
+        font-size: 20px;
+    }
+
+    #check:checked ~ .Header_lista{
+        left: 0;
+    }
+
+
+    
+}
+
+
+html {
+    scroll-behavior: smooth;
+    background-image: black;
+}
+
+h1 {
+    font-size: 2.1em;
+    color: #fff;
+    float: right;
+    margin-right: 80px;
+}
+
+p.grupo {
+    color: #fff;
+    font-size: 1.2em;
+
+}
+
+h2 {
+    color: aliceblue;
+}
+
+h3 {
+    color: aliceblue;
+    position: relative;
+}
+
+#body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+
+
+}
+
+.segunda {
+    color: rgb(235, 214, 98);
+}
+
+#somos {
+    text-align: center;
+    padding: 120px;
+}
+
+.banner {
+    width: 100%;
+    height: 750px;
+    animation: banner 10s infinite linear alternate;
+    background-size: 100% 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.9;
+    padding: 0px 1px;
+    margin-right: 2px;
+}
+.banner h2{
+    
+}
+.texto {
+    z-index: 1;
+    width: 100%;
+    max-width: 550px;
+    text-align: center;
+}
+
+.texto a {
+    color: #fff;
+    text-decoration: none;
+    background: #a88a61;
+    padding: 10px 31px;
+    display: inline-block;
+    border-radius: 50px;
+}
+
+.img-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+#participantes .container {
+    background-color: rgb(30, 30, 30);
+    color: white;
+    width: 100%;
+    height: 100%;
+}
+
+#participantes .container {
+    text-align: center;
+    padding: 32px;
+}
+
+
+#participantes h2 {
+    margin-top: 0;
+    justify-items: flex-end;
+}
+
+#participantes .carta {
+    background-position: center center;
+    background-size: cover;
+    padding: 100px;
+    margin: 12px;
+    border-radius: 15px;
+}
+
+.carta:first-child {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url(https://cms.modumb.com/storage/videos/_635x585/arreglo-basico-de-barba.jpg);
+    background-size: cover;
+    background-position: center center;
+    margin: 12px;
+    height: 400px;
+}
+
+.carta:nth-child(2) {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/barba-de-gillette-1606494417.jpg?crop=0.473xw:1.00xh;0.0673xw,0&resize=640:*);
+    background-position: center center;
+    background-size: cover;
+    margin: 12px;
+    height: 400px;
+}
+
+.carta:nth-child(3) {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url(https://ath2.unileverservices.com/wp-content/uploads/sites/13/2022/04/27193642/cortes-de-pelo-con-barba-19.jpg);
+    background-position: center center;
+    margin: 12px;
+    height: 400px;
+}
+
+#participantes h3 {
+    justify-content: end;
+    text-align: center;
+
+}
+
+@keyframes banner {
+
+    0%,
+    30% {
+        background-image: url(https://www.comunicare.es/wp-content/uploads/2021/02/aprender-a-programar-despues-de-los-30.jpg);
+    }
+
+    40%,
+    60% {
+        background-image: url(https://windowsxcenter.com/wp-content/uploads/2022/05/Why-we-all-need-to-learn-coding.webp.webp);
+    }
+
+
+    65%,
+    100% {
+        background-image: url(https://www.alten.com/wp-content/uploads/2018/08/shutterstock_626435660.jpg);
+    }
+
+}
+
+
+@media (min-width: 720px) {
+    header {
+        position: fixed;
+        display: flex;
+        width: 100%;
+    }
+
+    header.container {
+        display: block;
+    }
+
+    header nav {
+        flex-direction: row;
+        padding-bottom: 0;
+        padding: 12px 10px;
+        padding-right: 20px;
+    }
+
+    .banner {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .logo {
+        flex-direction: column;
+    }
+
+    #somos .texto {
+        text-align: center;
+        padding: 0px 30px;
+    }
+
+    #participantes .nosotros {
+        display: flex;
+        justify-content: center;
+    }
+
+    #participantes p {
+        display: block;
+    }
+
+    #participantes .carta {
+        padding: 5px;
+    }
+
+    #participantes h3 {
+        margin-top: 0;
+    }
+}
+
+.footer__container {
+    margin-top: 15px;
+    width: 100%;
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0;
+}
+
+.footer__container-img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-img__logo {
+    width: 260px;
+}
+
+.footer-nav__title {
+    color: #fff;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+.footer-nav__link {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer-nav__link-item {
+    padding-top: 4px;
+}
+
+.footer-nav__link:hover {
+    color: aqua;
+}
+
+
+.footer-nav__link-list {
+    list-style: none;
+    padding: 0;
+    bottom: 1px;
+}
+
+.footer-copyrigth {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    height: 100px;
+    color: white;
+    background-color: black;
+    border-style: solid;
+    border-top-width: 2px;
+    border-top-color: #fff
+}
+
+@media screen and (max-width: 800px) {
+
+    .footer__container {
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .footer-nav__title {
+        text-align: center;
+    }
+
+    .footer-nav__link-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+        bottom: 1px;
+    }
+
+}
